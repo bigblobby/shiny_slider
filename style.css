@@ -47,3 +47,40 @@
     width: 100%;
     pointer-events: none;
 }
+
+
+
+
+
+.carousel-2 {
+    position: relative;
+    width: 10000px;
+}
+
+.carousel-2.transition {
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-2 .slide {
+    width: 500px;
+    height: 400px;
+    float: left;
+}
+
+.carousel-2 .slide-1 {
+    background-color: red;
+}
+
+.carousel-2 .slide-2 {
+    background-color: blue;
+}
+
+.carousel-2 .slide-3 {
+    background-color: purple;
+}
+
+.carousel-2 .slide img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}

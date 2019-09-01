@@ -1,7 +1,7 @@
-var carousel = (function(){
+function func(){
 
     // ----- Carousel settings ----- //
-    var carouselWrapper = document.querySelector('.carousel--wrapper');
+    var carouselWrapper = document.querySelectorAll('.carousel--wrapper');
     var dragStart;
     var dragEnd;
 
@@ -19,7 +19,10 @@ var carousel = (function(){
             }
 
             // Calculate width of carousel wrapper (number of slides to show)
-            carouselWrapper.style.width = (this.slideWidth() * this.slidesToShow) + 'px';
+            carouselWrapper.forEach(function(wrapper){
+                wrapper.style.width = (this.slideWidth() * this.slidesToShow) + 'px';
+            }, this);
+
 
             // Add event listeners
             addListeners();
@@ -109,10 +112,20 @@ var carousel = (function(){
     return {
         init: init
     }
-})();
+}
+
+var carousel = func();
+
+var carousel2 = func();
 
 carousel.init({
     target: '.carousel',
+    threshold: 100,
+    slidesToShow: 1
+});
+
+carousel2.init({
+    target: '.carousel-2',
     threshold: 100,
     slidesToShow: 1
 });
