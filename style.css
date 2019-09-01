@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.carousel--wrapper {
+    height: 400px;
+    margin: 0 auto;
+}
+
+.carousel--track {
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 10000px;
+}
+
+.carousel.transition {
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel .slide {
+    width: 500px;
+    height: 400px;
+    float: left;
+}
+
+.carousel .slide-1 {
+    background-color: red;
+}
+
+.carousel .slide-2 {
+    background-color: blue;
+}
+
+.carousel .slide-3 {
+    background-color: purple;
+}
+
+.carousel .slide img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
